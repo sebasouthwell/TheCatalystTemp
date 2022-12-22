@@ -1,0 +1,59 @@
+---
+layout: default
+---
+
+<!-- blog single -->
+<hr class="space-1">
+<section>
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-8">
+				<h4>{{ page.title | escape }}</h4>
+				<ul class="list-inline d-flex justify-content-between py-3">
+					<li class="list-inline-item"><i class="ti-calendar mr-2"></i>{{page.date | date: '%b %d, %Y'}}</li>
+				</ul>
+				{% if page.image %}
+					{% unless page.article %}
+						<img src="{{page.image | relative_url}}" alt="{{page.title}}" class="w-100 img-fluid mb-4">
+					{% endunless %}
+				{% endif %}
+				<div class="content">
+					{{ content }}
+				</div>
+				{% if page.article %}
+				<div class="article-style-pdf">
+					<embed src="{{page.article | relative_url}}" class="w-100" height="100%" type="application/pdf">
+				</div>
+				<a href="{{page.article | relative_url}}">If PDF fails to display, click here to download this issue.</a>
+				{% if page.acknowledgements %}
+					<hr class="space-1">
+					<h4 class="text-center">Acknowledgements</h4>
+					<div class="acknowledgements flex-wrap">
+					{% for pagesection in page.acknowledgements %}
+						<hr class="space-1">
+						<div class="d-flex flex-column pb-2 px-2">
+							<h5>{{pagesection["section"]}}</h1>
+							{% for infoindex in pagesection["info"] %}
+								{% if infoindex.link %}
+								<a href="{{infoindex.link}}"> {{ infoindex.name }}</a>
+								{% else %}
+								<a> {{ infoindex.name }}</a>
+								{% endif %}
+							{% endfor %}
+						</div>
+						<br>
+					{% endfor %}
+					</div>
+				{% endif %}
+				
+				<hr class="space-1">
+				{% endif %}
+				{% if site.disqus-identifier %}
+				{% include disqus-comments.html %}
+				{% endif %}
+			</div>
+			{% include sidebar.html %}
+		</div>
+	</div>
+</section>
+<!-- /blog single -->

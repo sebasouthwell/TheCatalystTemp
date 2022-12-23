@@ -18,13 +18,13 @@ menu:
     url: /category/issues
     submenu: 
       - name: "Spring (2022)"
-        url: /2021-04-24-april-issue-4
+        url: /articles/spring-1-2022
       - name: "Winter #2 (2021)"
-        url: /2021-01-30-january-issue-3
+        url: /articles/winter-2-2021
       - name: "Winter #1 (2021)"
-        url: /2021-12-26-december-issue-2
+        url: /articles/winter-1-2021
       - name: "Autumn #1 (2021)"
-        url: /2021-09-26-september-issue-1
+        url: /articles/autumn-1-2021
   - name: Recommendations
     url: /contact/
   - name: About Us

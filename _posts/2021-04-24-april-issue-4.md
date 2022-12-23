@@ -6,6 +6,7 @@ description: "Our April issue explores some areas inside Nuclear chemistry, rele
 featured: true
 image: "assets/articles/Apr2022-4.jpg"
 article: "assets/articles/Apr2022-4.pdf#view=FitV"
+permalink: "/articles/spring-1-2022"
 categories: 
   - "Issues"
 

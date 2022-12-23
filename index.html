@@ -1,5 +1,6 @@
 ---
 layout: default
+description: We are a group of chemistry students from King's College London aiming to connect chemists all around the world with our magazine. Whether you are just starting out your career in chemistry, an undergraduate or postgraduate university student, or even a professional chemist, we hope you enjoy reading our magazine and learn something new. We publish new issues regularly with each having an overriding theme composed of themed and off-themed articles, all investigated and written by us. We want our audience to get a clear understanding of a variety of topics within the field of Chemistry. Not only can you read our issues, but we also offer, exciting interviews and book recommendations. However, above everything else, we want our audience to see our passion for chemistry and hopefully, inspire others to delve deeper into this science.
 ---
 
 {% if site.layout_home_page == true %}
@@ -54,7 +55,7 @@ However, above everything else, we want our audience to see our passion for chem
     <h4>Our Founders</h4>
     <div class="founder-centered justify-content-around flex-wrap mx-5">
       {% for team in site.teams %}
-        {% unless team.founding_statement.nil? %}
+        {% if team.founding_statement %}
         <div class="pt-4 flexi-founder flexi-centered mx-3">
           <img class="rounded-circle founding_image" src="{{team.image}}">
         </img>
@@ -65,7 +66,7 @@ However, above everything else, we want our audience to see our passion for chem
             </span>
           </div>
         </div>
-        {% endunless %}
+        {% endif %}
       {% endfor %}
     </div>
   </div>

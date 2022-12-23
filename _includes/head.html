@@ -7,7 +7,9 @@
   
   <!-- theme meta -->
   <meta name="theme-name" content="parsa-jekyll" />
-  
+  {% if page.title %} <meta property="og:title" content="{{ page.title }}">{% else %}<meta property="og:title" content="{{ site.title }}">{% endif %}
+  {% if page.description %} <meta property="og:description" content="{{ page.description }}" > {% else %}<meta property="og:description" content="{{ We are a group of chemistry students from King's College London aiming to connect chemists all around the world with our magazine. Whether you are just starting out your career in chemistry, an undergraduate or postgraduate university student, or even a professional chemist, we hope you enjoy reading our magazine and learn something new. We publish new issues regularly with each having an overriding theme composed of themed and off-themed articles, all investigated and written by us. We want our audience to get a clear understanding of a variety of topics within the field of Chemistry. Not only can you read our issues, but we also offer, exciting interviews and book recommendations. However, above everything else, we want our audience to see our passion for chemistry and hopefully, inspire others to delve deeper into this science.}}">{% endif %}
+  {% if page.image %} <meta property="og:image" content="{{ site.baseurl }}/{{ page.image }}"> {% else %} <meta property="og:image" content="{{ site.baseurl }}/assets/images/logo.png"> {% endif %}
   <!-- ** Plugins Needed for the Project ** -->
   <!-- Bootstrap -->
   <link rel="stylesheet" href="{{ site.baseurl }}/assets/plugins/bootstrap/bootstrap.min.css">

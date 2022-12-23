@@ -1,5 +1,5 @@
 ---
-id: elena_rubini
+ref_id: elena_rubini
 name: Elena Rubini
 team: Writers
 role: Lead Writer

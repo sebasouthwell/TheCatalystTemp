@@ -31,7 +31,7 @@ menu:
     url: /
     submenu: 
       - name: "Meet Our Team"
-        url: /issues
+        url: /meet_the_team
       - name: "About Us"
         url: /issues
       - name: "Join Us"

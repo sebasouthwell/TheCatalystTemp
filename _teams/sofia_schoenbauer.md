@@ -1,5 +1,5 @@
 ---
-id: sofia_schoenbauer
+ref_id: sofia_schoenbauer
 name: Sofia Schoenbauer
 team: Writers
 role: Lead Writer

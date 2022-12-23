@@ -1,14 +1,50 @@
-<html>
-    <head>
-        <meta charset="utf-8"/>
-        <meta http-equiv="refresh" content="1;url=/category/issues/"/>
-        <link rel="canonical" href="/category/issues/"/>
-        <script type="text/javascript">
-                window.location.href = "/category/issues/"
-        </script>
-        <title>Page Redirection</title>
-    </head>
-    <body>
-    If you are not redirected automatically, follow <a href='{{ page.redirect }}'>this link</a>.
-    </body>
-    </html>
+---
+layout: page
+title: Meet The Team
+permalink: /meet_the_team/
+---
+<h4>
+    Meet all the people behind the creation of each new issue. You will find us divided into four different subteams: graphic editors, writers, proofreaders and marketing team members. Find more information about each sub-team here: 
+</h4>
+<hr class="space-1">
+<h5>
+    Graphic Editorial Team
+</h5>
+<div class="founder-centered justify-content-around flex-wrap mx-5">
+{% for team in site.teams %}
+{% if team.team == "Graphic Editorial Team" %}
+<div id="{{team.ref_id}}" class="team-display" style="background-image: url('/{{team.image}}');">
+    <div class="team-content py-2 d-flex">
+        <h6>
+          {{team.name}}
+        </h6>
+        <br>
+        <p>{{team.role}}</p>
+        <hr>
+        <p>{{team.statement}}</p>
+    </div>
+</div>
+{% endif %}
+{% endfor %}
+</div>
+<br>
+<h5>
+    Writers
+</h5>
+<div class="founder-centered justify-content-around flex-wrap mx-5">
+{% for team in site.teams %}
+{% if team.team == "Writers" %}
+    <div id="{{team.ref_id}}" class="team-display" style="background-image: url('/{{team.image}}');">
+        <div class="team-content py-2 d-flex">
+            <h6>
+              {{team.name}}
+            </h6>
+            <br>
+            <p>{{team.role}}</p>
+            <hr>
+            <p>{{team.statement}}</p>
+        </div>
+    </div>
+{% endif %}
+{% endfor %}
+</div>

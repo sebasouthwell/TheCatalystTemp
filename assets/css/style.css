@@ -512,14 +512,42 @@ textarea.form-control {
   display: contents!important;
 }
 
+.team-display{
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  z-index: 1;
+}
+
+.team-content{
+  min-width: 80%;
+  min-height: 80%;
+  background-color: rgba(70, 233, 255, 0.732);
+  display: contents;
+  visibility: hidden;
+}
+.team-content:not(:hover){
+  display: none;
+}
+.team-content:hover {
+  display: contents!important;
+  visibility: visible!important;
+}
+
+
 .navbar-brand {
   width: 60%;
   height: 60%;
 }
 
 @media (min-width: 580px){
-  .flexi-founder{
-    width: 30%!important;
+  .flexi-founder, .team-display{
+    width: 301px!important;
+    min-height: 400px!important;
   }
 
   .founder-centered{

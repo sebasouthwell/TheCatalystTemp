@@ -28,6 +28,23 @@ permalink: /meet_the_team/
                 </div>
                 <hr class="w-75">
                 <p>{{people.statement}}</p>
+                <div class="d-flex flex-wrap justify-content-around">
+                    {% if people.linkedin %}
+                    <a href="https://www.linkedin.com/in/{{ people.linkedin }}">
+                        <i class="ti-linkedin person-link"></i>
+                    </a>
+                    {% endif %}
+                    {% if people.instagram %}
+                    <a href="https://www.instagram.com/{{ people.instagram }}">
+                        <i class="ti-instagram person-link"></i>
+                    </a>
+                    {% endif %}
+                    {% if people.website %}
+                    <a href="{{ people.website }}">
+                        <i class="ti-link person-link"></i>
+                    </a>
+                    {% endif %}
+                </div>
             </div>
             <br>
         </div>

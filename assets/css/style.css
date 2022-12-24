@@ -16,6 +16,10 @@ VERSION:	Versoin Number
   font-display: swap;
 }
 
+.person-link{
+  font-size: 1.5rem;
+}
+
 :root {
   --main-primary-color: rgb(117,173,187);
   --main-load-color: rgb(2,48,71);

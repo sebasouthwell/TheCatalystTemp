@@ -8,55 +8,32 @@ permalink: /meet_the_team/
 </h4>
 <script type="text/javascript" src="{{ site.baseurl }}/assets/js/hoverimage.js"></script>
 <hr class="space-1">
+<hr class="w-75">
+{% assign people_grouped_by_team = site.teams | group_by: "team" %}
+{% for subteam in people_grouped_by_team %}
 <div class="text-center">
     <h5>
-        Graphic Editorial Team
+        {{ subteam.name }}
     </h5>
     <div class="founder-centered justify-content-around flex-wrap mx-5">
-    {% for team in site.teams %}
-    {% if team.team == "Graphic Editorial Team" %}
-    <div id="{{team.ref_id}}" class="team-display" style="background-image: url('/{{team.image}}');" onmouseenter="teamContent(this,true);" onmouseleave="teamContent(this,false);">
-        <div class="team-content my-1 d-flex flex-column">
-            <br>
-            <div >
-                <p class="font-weight-bold member-title">
-                    {{team.name}}
-                </p>
-                  <p class="font-weight-bold">{{team.role}}</p>
+    {% for people in subteam.items %}
+        <div id="{{people.ref_id}}" class="team-display my-2" style="background-image: url('/{{people.image}}');" onmouseenter="teamContent(this,true);" onmouseleave="teamContent(this,false);">
+            <div class="team-content my-1 d-flex flex-column">
+                <br>
+                <div >
+                    <p class="font-weight-bold member-title">
+                        {{people.name}}
+                    </p>
+                    <p class="font-weight-bold">{{people.role}}</p>
+                </div>
+                <hr class="w-75">
+                <p>{{people.statement}}</p>
             </div>
-            <hr class="w-75">
-            <p>{{team.statement}}</p>
-        </div>
-        <br>
-    </div>
-    <br>
-    {% endif %}
-    {% endfor %}
-    </div>
-    <hr>
-    <h5>
-        Writers
-    </h5>
-    <div class="founder-centered justify-content-around flex-wrap mx-5">
-    {% for team in site.teams %}
-    {% if team.team == "Writers" %}
-        
-    <div id="{{team.ref_id}}" class="team-display" style="background-image: url('/{{team.image}}');" onmouseenter="teamContent(this,true);" onmouseleave="teamContent(this,false);">
-        <div class="team-content my-1 d-flex flex-column">
             <br>
-            <div >
-                <p class="font-weight-bold member-title">
-                    {{team.name}}
-                </p>
-                  <p class="font-weight-bold">{{team.role}}</p>
-            </div>
-            <hr class="w-75">
-            <p>{{team.statement}}</p>
         </div>
-        <br>
-    </div>
-    <br>
-    {% endif %}
     {% endfor %}
     </div>
 </div>
+<hr class="w-75">
+<hr class="space-1">
+{% endfor %}

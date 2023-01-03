@@ -6,20 +6,21 @@ permalink: /careers/after_university
 <h4>
   Learn about some career options related to each one of our issues.  Click on the links to get more information about each role.
 </h4>
-<script type="text/javascript" src="{{ site.baseurl }}/assets/js/hoverimage.js"></script>
+<script type="text/javascript" src="{{ site.baseurl }}/assets/js/category_show.js"></script>
 <hr class="space-1">
 {% assign careers_grouped_by_category = site.careers | group_by: "category" %}
 <div>
-  <button type="button" onclick="category_show()" class="btn btn-primary"">
+  <button type="button" onclick="category_show()" class="btn btn-primary buttonfilter">
     Show All
   </button>
   {% for category in careers_grouped_by_category %}
-  <button type="button" class="btn btn-primary"" onclick="category_show('{{subteam.name}}')">
+  <button type="button" class="btn btn-primary buttonfilter" onclick="category_show('{{category.name}}')">
     {{ category.name }}
   </button>
   {% endfor %}
 </div>
 <hr class="w-75">
+<div id="categories">
 {% for category in careers_grouped_by_category %}
 <div class="text-center">
   <h5>
@@ -40,7 +41,8 @@ permalink: /careers/after_university
    </div>
   {% endfor %}
   </div>
+  <hr class="w-75">
+  <hr class="space-1">
 </div>
-<hr class="w-75">
-<hr class="space-1">
 {% endfor %}
+</div>

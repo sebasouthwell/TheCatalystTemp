@@ -27,15 +27,20 @@ menu:
         url: /articles/autumn-1-2021
   - name: Recommendations
     url: /contact/
+  - name: Careers
+    url: /
+    submenu:
+      - name: After University
+        url: /careers/after_university
   - name: About Us
     url: /
     submenu: 
       - name: "Meet Our Team"
         url: /meet_the_team
       - name: "About Us"
-        url: /issues
+        url: /about_us/our_story
       - name: "Join Us"
-        url: /issues
+        url: /joinus
       - name: "Contact Us"
         url: /contact
 # *** NOTE ***
@@ -51,6 +56,8 @@ menu:
 
 collections:
   teams:
+    output: true
+  careers:
     output: true
 
 layout_home_page: true # Homepage layout ( two layout is available, you can set the another layout by change the value of layout_home_page "true" to "false")
@@ -82,8 +89,9 @@ contact-form: thecatalyst-magazine@outlook.com
 
 # Social links
 social:
-  - { icon: "ti-linkedin", link: "https://www.linkedin.com/company/connectingchemists/" }
-  - { icon: "ti-instagram", link: "https://www.instagram.com/thecatalyst.magazine/"}
+  - { icon: "ti-linkedin", link: "https://www.linkedin.com/company/connectingchemists/", name: "LinkedIn" }
+  - { icon: "ti-instagram", link: "https://www.instagram.com/thecatalyst.magazine/", name: "Instagram"}
+  - { icon: "ti-twitter", link: "https://twitter.com/ThecatalystM?s=09", name: "Twitter"}
 
 #-------------------------------
 # Comment Section (Disqus)

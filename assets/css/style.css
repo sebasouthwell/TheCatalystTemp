@@ -102,6 +102,32 @@ h3, .h3 {
   font-size: 40px;
 }
 
+
+.social-media-container{
+  background-color: var(--main-load-color);
+  border-radius: 15px;
+}
+
+.w-200p{
+  width: 200px;
+}
+
+.w-300p{
+  width: 300px;
+}
+
+.w-400p{
+  width: 400px;
+}
+
+.w-500p{
+  width: 500px;
+}
+
+.d-contents {
+  display: contents!important;
+}
+
 h4, .h4 {
   font-size: 30px;
 }

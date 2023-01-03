@@ -1,0 +1,46 @@
+---
+layout: page
+title: After University
+permalink: /careers/after_university
+---
+<h4>
+  Learn about some career options related to each one of our issues.  Click on the links to get more information about each role.
+</h4>
+<script type="text/javascript" src="{{ site.baseurl }}/assets/js/hoverimage.js"></script>
+<hr class="space-1">
+{% assign careers_grouped_by_category = site.careers | group_by: "category" %}
+<div>
+  <button type="button" onclick="category_show()" class="btn btn-primary"">
+    Show All
+  </button>
+  {% for category in careers_grouped_by_category %}
+  <button type="button" class="btn btn-primary"" onclick="category_show('{{subteam.name}}')">
+    {{ category.name }}
+  </button>
+  {% endfor %}
+</div>
+<hr class="w-75">
+{% for category in careers_grouped_by_category %}
+<div class="text-center">
+  <h5>
+      {{ category.name }}
+  </h5>
+  <div class="d-flex justify-content-around flex-wrap mx-5">
+  {% for job in category.items %}
+   <div class="w-300p mb-2 px-2 py-2 border border-primary">
+  <h6>
+    {{job.name}}
+  </h6>
+  <p>
+    {{job.description}}
+  </p>
+  <a href="{{job.link}}" class="btn">
+    {% if job.alt_button %}{{ job.alt_button}}{% else %}Read more {% endif %}
+  </a>
+   </div>
+  {% endfor %}
+  </div>
+</div>
+<hr class="w-75">
+<hr class="space-1">
+{% endfor %}

@@ -6,22 +6,22 @@ permalink: /contact
 <h4>
   See how you can contact us for any questions you may have about us or our magazine or if you are interested in working with us. What is more, our social platforms are linked below, so go and follow us!
 </h4>
-<div class="d-flex align-items-center justify-content-center">
+<hr class="space-1">
+<div class="d-flex align-items-center justify-content-center border border-primary">
   <iframe class="w-75" src="https://docs.google.com/forms/d/e/1FAIpQLSeXsOcpCu0Jn5f63AmrHDWsKX4SNtA1zj2IcAEKZE_SB7Iisg/viewform?embedded=true" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
 </div>
-<hr class="space-1">
 <hr class="w-75">
 <div class="social-media-container justify-content-center align-items-center">
   <div class="justify-content-center">
     <hr class="w-75">
+    <h4 class="text-center text-light">
+      Follow Our Socials
+    </h4>
+    <hr class="space-1">
     <ul class="list-inline d-flex justify-content-around">
       {% for social in site.social %}
-      <li class="list-inline-item h3"><a href="{{ social.link }}" class="text-light"><i class="{{ social.icon }}"></i><br>{{ social.name }}</a></li>
+      <li class="list-inline-item social-contact text-center"><a href="{{ social.link }}" class="text-light"><i class="{{ social.icon }}"></i><br>{{ social.name }}</a></li>
       {% endfor %}
       </ul>
-      <h4 class="text-center text-light">
-        Follow Our Socials
-      </h4>
-      <hr class="w-75">
   </div>
 </div>

@@ -1,20 +1,37 @@
 ---
 layout: page
-title: Our Story
+title: About Us
 permalink: /about_us/our_story
-image: /assets/images/contact.jpg
 ---
-<html>
-    <head>
-        <meta charset="utf-8"/>
-        <meta http-equiv="refresh" content="1;url=/category/issues/"/>
-        <link rel="canonical" href="/category/issues/"/>
-        <script type="text/javascript">
-                window.location.href = "/category/issues/"
-        </script>
-        <title>Page Redirection</title>
-    </head>
-    <body>
-    If you are not redirected automatically, follow <a href='{{ page.redirect }}'>this link</a>.
-    </body>
-    </html>
+<h4>
+    Learn more about how we got here and what our aims for the future are
+</h4>
+<section class="section pt-5 pb-1">
+    <div class="container-fluid text-center">
+      <h4>Our Story</h4>
+      <p class="p-4">
+        At the end of the second year of their chemistry degree, in May 2021, our founders, <a href="{{site.base_url}}/meet_the_team#milan_singh">Milan Singh</a>, <a href="{{site.base_url}}/meet_the_team#sofia_schoenbauer">Sofia Schoenbauer</a>, and <a href="{{site.base_url}}/meet_the_team#milan_singh">Milan Singh</a>, <a href="{{site.base_url}}/meet_the_team#elena_rubini">Elena Rubini</a>, came up with the idea to create a student-led magazine and, they chose their passion for the subject as the foundation of their new project. They identified the perceived difficulty of the field, despite being surrounded by it. By founding this magazine, their aim was to eliminate that misunderstanding, by attempting to make chemistry a subject that their target audience would enjoy , while learning aspects of chemistry they were not so familiar with either.<br>
+        After a couple of weeks of planning, they were ready to get more people involved in their initiative. Firstly, they recruited some of their peers, other second-year chemistry students from their course, and decided to assign different roles according to everyone's preferences. This is when the sub-teams formed, led by the three of them: Milan Singh, director of the graphic editorial team and provisional head of the marketing team; Sofia Schoenbauer and Elena Rubini, both writer directors . As the summer break came to end, more students from other universities and courses started to join. <br>
+       Summer 2021... The time when each individual of the newly formed 'The Catalyst' team cooperated with a tireless effort to prepare the first edition, released in September of the same year, including writing all of the articles, creating the magazine and building this very website. We are ambitious and we aim to expand this team, which is why we are still recruiting to make the magazine more accessible for everyone.
+      </p>
+    </div>
+    <div class="container-fluid text-center justify-content-center">
+      <h4>Our Founders</h4>
+      <div class="founder-centered justify-content-around flex-wrap mx-5">
+        {% for team in site.teams %}
+          {% if team.founding_statement %}
+          <div class="pt-4 flexi-founder flexi-centered mx-3">
+            <img class="rounded-circle founding_image" src="{{site.base_url}}/{{team.image}}">
+          </img>
+          <div class="founder-centered founder-div flex-column">
+              <h5 ><a href="/meet_the_team#{{team.ref_id}}" class="text-center reg-text p-2">{{team.name}}</a></h5>
+              <span class="text-center text-secondary" style="font-family:brandon-grot-w01-light,brandon-grot-w05-light,sans-serif;">
+                '{{team.founding_statement}}'
+              </span>
+            </div>
+          </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  </section>

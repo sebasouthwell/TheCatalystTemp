@@ -26,13 +26,19 @@ acknowledgements:
   - section: "Writers"
     info: 
       - name: "Matt Dagwell"
-        link: "https://www.linkedin.com/in/matt-dagwell-1b3837170/"
+        team: matt_dagwell
       - name: "Sofia Schoenbauer"
+        team: sofia_schoenbauer
       - name: "Paul Amar"
+        team: paul_amar
       - name: "Elena Rubini"
+        team: elena_rubini
       - name: "Louis Weiss"
+        team: louis_weiss
       - name: "Milan Singh"
+        team: milan_singh
       - name: "Claudia Almuzara"
+        team: claudia_almuzara
   - section: "Proofreaders"
     info: 
       - name: "Alia Nathoo"

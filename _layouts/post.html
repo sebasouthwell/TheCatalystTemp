@@ -34,7 +34,9 @@ layout: default
 						<div class="d-flex flex-column pb-2 px-2">
 							<h5>{{pagesection["section"]}}</h1>
 							{% for infoindex in pagesection["info"] %}
-								{% if infoindex.link %}
+								{% if infoindex.team %}
+								<a href="{{site.baseurl}}/meet_the_team#{{infoindex.link}}"> {{ infoindex.name }}</a>
+								{% elsif infoindex.link %}
 								<a href="{{infoindex.link}}"> {{ infoindex.name }}</a>
 								{% else %}
 								<a> {{ infoindex.name }}</a>

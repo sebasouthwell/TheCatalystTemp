@@ -7,10 +7,23 @@ permalink: /meet_the_team/
     Meet all the people behind the creation of each new issue. You will find us divided into four different subteams: graphic editors, writers, proofreaders and marketing team members. Find more information about each sub-team here: 
 </h4>
 <script type="text/javascript" src="{{ site.baseurl }}/assets/js/hoverimage.js"></script>
+<script type="text/javascript" src="{{ site.baseurl }}/assets/js/category_show.js"></script>
+{% assign people_grouped_by_team = site.teams | group_by: "team" %}
+<div>
+    <button type="button" onclick="team_show()" class="btn btn-primary buttonfilter">
+      Show All
+    </button>
+    {% for subteam in people_grouped_by_team %}
+    <button type="button" class="btn btn-primary buttonfilter" onclick="team_show('{{subteam.name}}')">
+      {{ subteam.name }}
+    </button>
+    {% endfor %}
+  </div>
 <hr class="space-1">
 <hr class="w-75">
-{% assign people_grouped_by_team = site.teams | group_by: "team" %}
+<div id="categories">
 {% for subteam in people_grouped_by_team %}
+<div>
 <div class="text-center">
     <h5>
         {{ subteam.name }}
@@ -53,4 +66,6 @@ permalink: /meet_the_team/
 </div>
 <hr class="w-75">
 <hr class="space-1">
+</div>
 {% endfor %}
+</div>>

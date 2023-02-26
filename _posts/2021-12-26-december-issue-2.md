@@ -8,7 +8,7 @@ image: "assets/articles/Dec2021-2.jpg"
 article: "assets/articles/Dec2021-2.pdf#view=FitV"
 categories: 
   - "Issues"
-permalink: "/articles/winter-1-2021"
+permalink: "/articles/dec2021"
 acknowledgements:
   - section: "Articles"
     info: 

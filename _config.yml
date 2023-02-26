@@ -1,4 +1,5 @@
 ---
+# deployment
 #-------------------------------
 # General Site Settings
 baseurl: "" # The subpath of your site, e.g. /blog
@@ -17,16 +18,16 @@ menu:
   - name: Issues
     url: /category/issues
     submenu: 
-      - name: "Spring (2022)"
-        url: /articles/spring-1-2022
-      - name: "Winter #2 (2021)"
-        url: /articles/winter-2-2021
-      - name: "Winter #1 (2021)"
-        url: /articles/winter-1-2021
-      - name: "Autumn #1 (2021)"
-        url: /articles/autumn-1-2021
+      - name: "April 2022"
+        url: /articles/apr2022
+      - name: "January 2022"
+        url: /articles/jan2022
+      - name: "December 2021"
+        url: /articles/dec2021
+      - name: "September 2021"
+        url: /articles/sep2021
   - name: Recommendations
-    url: /contact/
+    url: /recommendations
   - name: Careers
     url: /
     submenu:
@@ -59,7 +60,8 @@ collections:
     output: true
   careers:
     output: true
-
+  recommendations:
+    output: true
 layout_home_page: true # Homepage layout ( two layout is available, you can set the another layout by change the value of layout_home_page "true" to "false")
 
 featured-post-slider: true # You can enable or disable the featured-post-slider using true or false values.

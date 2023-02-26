@@ -1,0 +1,65 @@
+---
+layout: page
+title: Book Recommendations
+permalink: /recommendations/books
+---
+<h4>
+    Meet all the people behind the creation of each new issue. You will find us divided into four different subteams: graphic editors, writers, proofreaders and marketing team members. Find more information about each sub-team here: 
+</h4>
+<script type="text/javascript" src="{{ site.baseurl }}/assets/js/hoverimage.js"></script>
+<script type="text/javascript" src="{{ site.baseurl }}/assets/js/category_show.js"></script>
+<!-- Modify below so format must be book -->
+{% assign books_grouped_by_field = site.recommendations | where: "format", "book"  | group_by: "field" %}
+<div>
+    <button type="button" class="btn btn-primary buttonfilter" onclick="team_show()">
+      Show All
+    </button>
+    {% for field in books_grouped_by_field %}
+    <button type="button" class="btn btn-primary buttonfilter" onclick="team_show('{{field.name}}')">
+      {{ field.name }}
+    </button>
+    {% endfor %}
+</div>
+
+<hr class="space-1">
+<hr class="w-75">
+<div id="categories">
+{% for field in books_grouped_by_field %}
+<div>
+<div class="text-center">
+    <h5  class="lgh5">
+        {{ field.name }}
+    </h5>
+    <div class="founder-centered justify-content-around flex-wrap mx-5">
+    {% for book in field.items %}
+        <div class="team-display book-display my-2" style="background-image: url('/{{book.image}}');" onmouseenter="teamContent(this,true);" onmouseleave="teamContent(this,false);">
+            <div class="team-content my-1 d-flex flex-column">
+                <br>
+                <div >
+                    <p class="font-weight-bold member-title">
+                        {{book.title}}
+                    </p>
+                    <p class="font-weight-bold member-title">
+                        {{book.year}}
+                    </p>
+                    <p class="font-weight-bold member-title">Rating: {{book.rating}}/10</p>
+                </div>
+                <hr class="w-75">
+                <p>{{book.description}}</p>
+                <hr class="w-75">
+                <div class="d-flex flex-wrap justify-content-around">
+                    <a href="{{ book.referral_link }}">
+                        <i class="ti-link person-link"></i>
+                    </a>
+                </div>
+            </div>
+            <br>
+        </div>
+    {% endfor %}
+    </div>
+</div>
+<hr class="w-75">
+<hr class="space-1">
+</div>
+{% endfor %}
+</div>>

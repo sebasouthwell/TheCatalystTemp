@@ -1,0 +1,83 @@
+---
+layout: page
+title: Playlist Recommendations
+permalink: /recommendations/playlists
+---
+<h4>
+    Meet all the people behind the creation of each new issue. You will find us divided into four different subteams: graphic editors, writers, proofreaders and marketing team members. Find more information about each sub-team here: 
+</h4>
+<!-- Modify below so format must be book -->
+{% assign playlists_grouped_by_type = site.recommendations | where: "format", "playlist"  | group_by: "type" %}
+<div>
+    <button type="button" class="btn btn-primary buttonfilter" onclick="team_show()">
+      Show All
+    </button>
+    {% for type in playlists_grouped_by_type %}
+    <button type="button" class="btn btn-primary buttonfilter" onclick="team_show('{{field.name}}')">
+      {{ type.name }}
+    </button>
+    {% endfor %}
+</div>
+
+<hr class="space-1">
+<hr class="w-75">
+<div id="categories">
+{% for type in playlists_grouped_by_type %}
+<div>
+<div class="text-center">
+    <h5  class="lgh5">
+        {{ type.name }}
+    </h5>
+    <div class="founder-centered justify-content-around flex-wrap mx-5">
+    {% for playlist in type.items %}
+        <div class="team-display book-display my-2" style="background-image: url('/{{book.image}}');" onmouseenter="teamContent(this,true);" onmouseleave="teamContent(this,false);">
+            <div class="team-content my-1 d-flex flex-column show-class">
+                <br>
+                <div >
+                    {% if playlist.youtube_vid %}
+                    <iframe width="382" height="215" src="https://www.youtube.com/embed/1-NxodiGPCU" title="This Virus Shouldn&#39;t Exist (But it Does)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> 
+                    <p class="font-weight-bold member-title">
+                        {{playlist.title}}
+                    </p>
+                    <p class="font-weight-bold member-title">
+                        {{playlist.author}}
+                    </p>
+                    <hr class="w-75">
+                    <p>
+                        {{playlist.description}}
+                    </p>
+                    {% else %}
+                    <image>
+
+                    </image>
+                    <p class="font-weight-bold member-title">
+                        {{playlist.title}}
+                    </p>
+                    <p class="font-weight-bold member-title">
+                        {{playlist.author}}
+                    </p>
+                    <p class="font-weight-bold">
+                        Rating: {{playlist.rating}}/10
+                    </p>
+                    <hr class="w-75">
+                    <p>
+                        {{playlist.description}}
+                    </p>
+                    <hr class="w-75">
+                    <div class="d-flex flex-wrap justify-content-around">
+                        <a href="{{ book.referral_link }}">
+                            <i class="ti-link person-link"></i>
+                        </a>
+                    </div>
+                    {% endif %}
+            </div>
+            <br>
+        </div>
+    {% endfor %}
+    </div>
+</div>
+<hr class="w-75">
+<hr class="space-1">
+</div>
+{% endfor %}
+</div>>

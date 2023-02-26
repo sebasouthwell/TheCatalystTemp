@@ -6,7 +6,7 @@ description: "Our September issue explores some areas inside Therapeutic Chemist
 featured: true
 image: "assets/articles/Sep2021-1.jpg"
 article: "assets/articles/Sep2021-1.pdf#view=FitV"
-permalink: "/articles/autumn-1-2021"
+permalink: "/articles/sep2021"
 categories: 
   - "Issues"
 

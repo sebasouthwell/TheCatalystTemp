@@ -46,7 +46,7 @@ description: The Catalyst magazine offers regular issues with different topics a
   <div class="container-fluid text-center">
     <h4>Welcome to The Catalyst</h4>
     <p class="p-4">
-      We are a group of chemistry students from King's College London aiming to connect chemists all around the world with our magazine. Whether you are just starting out your career in chemistry, an undergraduate or postgraduate university student, or even a professional chemist, we hope you enjoy reading our magazine and learn something new. We publish new issues regularly with each having an overriding theme composed of themed and off-themed articles, all investigated and written by us.
+      We are a group of chemistry students from a variety of universities across the United Kingdom aiming to connect chemists all around the world with our magazine. Whether you are just starting out your career in chemistry, an undergraduate or postgraduate university student, or even a professional chemist, we hope you enjoy reading our magazine and learn something new. We publish new issues regularly with each having an overriding theme composed of themed and off-themed articles, all investigated and written by us.
 We want our audience to get a clear understanding of a variety of topics within the field of Chemistry. Not only can you read our issues, but we also offer, exciting <a class="text-dark">interviews</a> and <a class="text-dark">book</a> recommendations.
 However, above everything else, we want our audience to see our passion for chemistry and hopefully, inspire others to delve deeper into this science.
     </p>
@@ -57,11 +57,11 @@ However, above everything else, we want our audience to see our passion for chem
       {% for team in site.teams %}
         {% if team.founding_statement %}
         <div class="pt-4 flexi-founder flexi-centered mx-3">
-          <img class="rounded-circle founding_image" src="{{team.image}}">
+          <img class="founding_image" src="{{team.image}}">
         </img>
         <div class="founder-centered founder-div flex-column">
             <h5 ><a href="/meet_the_team#{{team.ref_id}}" class="text-center reg-text p-2">{{team.name}}</a></h5>
-            <span class="text-center text-secondary" style="font-family:brandon-grot-w01-light,brandon-grot-w05-light,sans-serif;">
+            <span class="text-justify text-secondary" style="font-family:brandon-grot-w01-light,brandon-grot-w05-light,sans-serif;">
               '{{team.founding_statement}}'
             </span>
           </div>

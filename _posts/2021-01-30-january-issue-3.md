@@ -6,10 +6,9 @@ description: "Our January issue explores some areas inside Green chemistry, rele
 featured: true
 image: "assets/articles/Jan2022-3.jpg"
 article: "assets/articles/Jan2022-3.pdf#view=FitV"
-permalink: "/articles/winter-2-2021"
 categories: 
   - "Issues"
-
+permalink: "/articles/jan2022"
 acknowledgements:
   - section: "Articles"
     info: 

@@ -21,8 +21,9 @@ VERSION:	Versoin Number
 }
 
 :root {
-  --main-primary-color: rgb(117,173,187);
-  --main-load-color: rgb(2,48,71);
+  --main-primary-color: #423e3e;
+  --main-load-color: #4b4b4b;
+  --headroom-color: #161616;
   --header-color: #313638;
   --light-bg-color: #fff;
 }
@@ -112,6 +113,12 @@ h3, .h3 {
   border-radius: 15px;
 }
 
+@media (min-width: 1200px){
+  .footcontainer{
+    max-width: 1240px;
+  }
+}
+
 .w-200p{
   width: 200px;
 }
@@ -138,6 +145,10 @@ h4, .h4 {
 
 h5, .h5 {
   font-size: 20px;
+}
+
+.lgh5{
+  font-size: 25px;
 }
 
 h6, .h6 {
@@ -395,10 +406,8 @@ a:hover, a.text-dark:hover {
    height: min(200px,50vw);
    object-fit: fill;
    object-fit: cover; object-position: 80% 5%;
-   -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-   filter: grayscale(100%);
+
    transform: scale(0.75);
-   box-shadow: 0px 0px 31px 10px var(--main-primary-color);
 }
 
 .founder-div{
@@ -438,7 +447,7 @@ a:hover, a.text-dark:hover {
 }
 
 .bg-secondary {
-  background: #0B3148 !important;
+  background: var(--headroom-color) !important;
 }
 
 .bg-tertiary {
@@ -543,7 +552,7 @@ textarea.form-control {
   right: 0;
   transition: all .4s ease-in-out;
   padding: 10px 40px;
-  background-color: #0B3148;
+  background-color: var(--headroom-color);
 }
 
 .flexi-founder{
@@ -605,6 +614,12 @@ textarea.form-control {
     min-height: 400px!important;
   }
 
+  .book-display {
+    width: 400px!important;
+    min-height: 400px!important;
+    height: 600px!important;
+  }
+
   .founder-centered{
     display: -ms-flexbox!important;
     display: flex!important;
@@ -615,7 +630,7 @@ textarea.form-control {
   .navbar-brand {
     width: 25%;
     height: 25%;
-  }s
+  }
 }
 
 

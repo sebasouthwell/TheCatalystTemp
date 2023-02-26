@@ -3,12 +3,12 @@
     <div class="container footcontainer">
       <div class="row">
         {% if site.logo %}
-        <div class="col-md-3 col-sm-6 mb-4 mb-md-0">
+        <div class="col-md-2 col-sm-6 mb-4 mb-md-0">
           <a href="{{site.baseurl}}/"><img src="{{site.logo | relative_url}}" alt="{{site.title}}" class="img-fluid"></a>
         </div>
         {% endif %}
         {% if site.contact.address %}
-        <div class="col-md-3 col-sm-6 mb-4 mb-md-0">
+        <div class="col-md-2 col-sm-6 mb-4 mb-md-0">
           <h6 class="text-light">Address</h6>
           <ul class="list-unstyled">
             <li class="font-secondary text-light">{{site.contact.address.city}}</li>
@@ -16,7 +16,7 @@
         </div>
         {% endif %}
         {% if site.contact %}
-        <div class="col-md-3 col-sm-6 mb-4 mb-md-0">
+        <div class="col-md-2 col-sm-6 mb-4 mb-md-0">
           <h6 class="text-light">Contact Info</h6>
           <ul class="list-unstyled">
             <li class="font-secondary text-light">Mail: {{site.contact.email}}</li>
@@ -24,7 +24,7 @@
         </div>
         {% endif %}
         {% if site.social %}
-        <div class="col-md-3 col-sm-6 mb-4 mb-md-0">
+        <div class="col-md-2 col-sm-6 mb-4 mb-md-0">
           <h6 class="text-light">Follow</h6>
           <ul class="list-inline d-inline-block">
             {% for social in site.social %}
@@ -33,6 +33,13 @@
           </ul>
         </div>
         {% endif %}
+        <div class="col-md-2 col-sm-6 mb-4 mb-md-0">
+          <h6 class="text-light">Give us your feedback</h6>
+          <ul class="list-inline d-inline-block">
+            <li class="list-inline-item"><a href="https://forms.gle/2Sj4om3WxyRDeRA78" class="text-light"><i class="ti-new-window"></i></a></li>
+          </ul>
+        </div>
+        
       </div>
     </div>
   </div>

@@ -27,7 +27,12 @@ menu:
       - name: "September 2021"
         url: /articles/sep2021
   - name: Recommendations
-    url: /recommendations
+    url: /
+    submenu:
+      - name: Playlists
+        url: /recommendations/playlists
+      - name: Books
+        url: /recommendations/books
   - name: Careers
     url: /
     submenu:
@@ -41,7 +46,7 @@ menu:
       - name: "About Us"
         url: /about_us/our_story
       - name: "Join Us"
-        url: /joinus
+        url: https://docs.google.com/forms/d/e/1FAIpQLSeCqwMHpv3vmbPllXd2LplVs_FP-hYwZtPW9y_lHxE3trogSA/viewform
       - name: "Contact Us"
         url: /contact
 # *** NOTE ***

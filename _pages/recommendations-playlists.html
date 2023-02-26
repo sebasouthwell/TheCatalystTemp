@@ -4,16 +4,17 @@ title: Playlist Recommendations
 permalink: /recommendations/playlists
 ---
 <h4>
-    Meet all the people behind the creation of each new issue. You will find us divided into four different subteams: graphic editors, writers, proofreaders and marketing team members. Find more information about each sub-team here: 
+    Our videos, documentaries and podcasts recommendations that will help expand your chemical knowledge.
 </h4>
 <!-- Modify below so format must be book -->
+<script type="text/javascript" src="{{ site.baseurl }}/assets/js/category_show.js"></script>
 {% assign playlists_grouped_by_type = site.recommendations | where: "format", "playlist"  | group_by: "type" %}
 <div>
     <button type="button" class="btn btn-primary buttonfilter" onclick="team_show()">
       Show All
     </button>
     {% for type in playlists_grouped_by_type %}
-    <button type="button" class="btn btn-primary buttonfilter" onclick="team_show('{{field.name}}')">
+    <button type="button" class="btn btn-primary buttonfilter" onclick="team_show('{{type.name}}')">
       {{ type.name }}
     </button>
     {% endfor %}
@@ -23,7 +24,6 @@ permalink: /recommendations/playlists
 <hr class="w-75">
 <div id="categories">
 {% for type in playlists_grouped_by_type %}
-<div>
 <div class="text-center">
     <h5  class="lgh5">
         {{ type.name }}
@@ -47,9 +47,9 @@ permalink: /recommendations/playlists
                         {{playlist.description}}
                     </p>
                     {% else %}
-                    <image>
-
-                    </image>
+                    <img src="{{ site.baseurl }}/{{ playlist.image }}" width="150" height="160">
+                        
+                    </img>
                     <p class="font-weight-bold member-title">
                         {{playlist.title}}
                     </p>
@@ -65,7 +65,7 @@ permalink: /recommendations/playlists
                     </p>
                     <hr class="w-75">
                     <div class="d-flex flex-wrap justify-content-around">
-                        <a href="{{ book.referral_link }}">
+                        <a href="{{ playlist.link }}">
                             <i class="ti-link person-link"></i>
                         </a>
                     </div>
@@ -80,4 +80,4 @@ permalink: /recommendations/playlists
 <hr class="space-1">
 </div>
 {% endfor %}
-</div>>
+</div>
